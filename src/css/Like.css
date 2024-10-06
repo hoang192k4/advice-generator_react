@@ -1,0 +1,142 @@
+/*like top*/
+.like__top {
+    padding:20px;
+}
+.like__top h1{
+    color: #75EAC0;
+    text-align: center;
+}
+.like .like_search{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.like .like_search input{
+    font-size:15px;
+    padding:5px 15px;
+    width: 60%;
+}
+.like .like_search button{
+    padding:10px 30px;
+    background-color: grey;
+    border: none;
+    width: 20%;
+    font-size: 15px;
+    color: white;
+}
+/*like listadvices*/
+.like_listadvices{
+    padding:5px;
+}
+.like_listadvices ul{
+    list-style:none;
+    padding-left:0;
+}
+.like_listadvices ul li{
+    width: 100%;
+    font-size:20px;
+    border: 0.5px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
+.like_listadvices ul li p{
+    margin:0;  
+    padding: 10px 0 10px 50px;
+    width: 95%; 
+}
+.like_listadvices ul li span{
+    padding:5px;
+    width: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    transition: background-color linear 0.3s;
+}
+.like_listadvices ul li span:hover{
+    background-color: red;
+    cursor: pointer;
+}
+
+.hidden__popup {
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    position: fixed;
+    width: 500px;
+    top: 40%;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+    z-index: 1;
+}
+
+.fa-check-circle {
+    color: #75EAC0;
+    padding-top: 15px;
+    font-size: 60px;
+}
+/* Hiển thị popup đã xóa */
+.hidden__popup .button_ok {
+    font-size: 20px;
+    background-color: rgb(29, 107, 243);
+    border: none;
+    color: white;
+    margin-top:2px;
+    padding: 10px 40px;
+}
+
+.over__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+    animation: over__hidden linear 0.5s;
+}
+@keyframes over__hidden {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  #popup__deleted:checked ~ .over__background{
+    display: block;
+  }
+  #popup__deleted:checked ~.hidden__popup{
+    display: block;
+  }
+@media screen and (max-width:723px) {
+    .like .like_search{
+       flex-wrap: wrap;
+    }
+    .like .like_search input{
+        width: 100%;
+        padding: 10px;
+    }
+    .like .like_search button{
+        border: none;
+        width: 100%;
+    }
+    .like__top {
+        padding:0;
+    }
+    .like_listadvices ul li{
+        flex-wrap: wrap;
+    }
+    .like_listadvices ul li p{
+        font-size:13px;
+        padding: 10px 5px;
+        width: 100%; 
+    }
+    .like_listadvices ul li span{
+        width: 100%;
+        padding:5px;
+    }
+}

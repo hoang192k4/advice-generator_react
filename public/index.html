@@ -1,43 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">
+  <title>Advice Generator</title>
+</head>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+<body>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+  <div id="root"></div>
+
+
+</body>
 </html>

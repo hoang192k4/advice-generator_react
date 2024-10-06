@@ -1,0 +1,137 @@
+.base{
+  background-color: #202630;
+  width: 100%;
+  min-height:700px;
+  height: auto;
+  color: white;
+  padding-bottom:30px;
+}
+/* navbar advice desktop */
+.navbar_advice-desktop{
+  background-color:#313A49 ;
+  color:#75EAC0;
+}
+.navbar_advice-desktop ul{
+  list-style:none;
+  display:flex;
+  margin-top:0;
+  padding:0;
+}
+.navbar_advice-desktop ul li{
+   padding:20px 20px;
+   transition: all linear 0.2s;
+}
+.navbar_advice-desktop ul li:hover{
+  background-color:#56FFAF;
+  color: black;
+  cursor: pointer;
+}
+/* navbar advice tablet mobile */
+.navbar_advice_tablet_mobile{
+  width: 380px;
+  background-color: white;
+  color: #1a4233;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 1;
+  transform: translateX(-100%);
+  transition: transform linear 0.3s; 
+}
+.navbar_advice_tablet_mobile ul{
+  list-style: none;
+  margin-top:50px;
+  padding-top: 10px;
+  padding-left:0;
+  border-top:2px solid #1a4233;
+}
+.navbar_advice_tablet_mobile ul li{
+  padding:10px 30px;
+  font-size: 20px;
+  transition: all ease 0.3s;
+  position: relative;
+}
+.navbar_advice_tablet_mobile .fa-times{
+  float:right;
+  padding: 20px;
+  font-size:20px ;
+  transition: font-size linear 0.2s;
+}
+.navbar_advice_tablet_mobile .fa-times:hover {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 30px;
+}
+.navbar_advice_tablet_mobile ul li:hover{
+  cursor: pointer;
+}
+.navbar_advice_tablet_mobile ul li::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color:  black;
+  bottom: 0;
+  left: 30px;
+  transition: width 0.5s ease; /* Tạo hiệu ứng mượt */
+}
+
+.navbar_advice_tablet_mobile ul li:hover::after {
+  width: 92%; /* Khi hover, border sẽ kéo dài 100% chiều rộng */
+}
+.over__background {
+  position:fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 1;
+  display: none;
+  animation: over__hidden linear 0.5s;
+}
+@keyframes over__hidden {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+.fa-bars{
+  font-size: 40px;
+}
+.setting__icon{
+  padding :20px;
+  width: 35px;
+  display: none;
+}
+#checkbox__hidden:checked ~ .over__background{
+  display: block;
+}
+#checkbox__hidden:checked ~.navbar_advice_tablet_mobile{
+  transform: translateX(0);
+}
+@media screen and (min-width:724px) and (max-width:1023px){
+  .setting__icon {
+    display: block;
+  }
+  .navbar_advice-desktop{
+    display: none;
+  }
+}
+@media screen and (max-width:723.5px){
+  .base{
+    min-height:885px;
+  }
+  .setting__icon {
+    display: block;
+  }
+  .navbar_advice_tablet_mobile{
+    width: 100%;
+  }
+  .navbar_advice-desktop{
+    display: none;
+  }
+}

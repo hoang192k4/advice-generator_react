@@ -1,0 +1,252 @@
+.container {
+    width: 50%;
+    background-color: #313A49;
+    border-radius: 15px;
+    margin-top: 50px;
+}
+.home__base{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.home__advice {
+    padding: 30px;
+}
+
+.border__advice {
+    display: flex;
+}
+
+.border__advice i {
+    font-size: 20px;
+}
+
+.title_advice {
+    text-align: center;
+    padding: 20px;
+}
+
+.title_advice h1 {
+    color: #75EAC0;
+}
+
+.title_advice p {
+    color: #C3D1DC;
+    font-size: 20px;
+    padding: 5px 30px;
+    font-weight: bold;
+}
+
+.fa-mobile-alt {
+    display: none;
+}
+
+.fa-tablet-alt {
+    display: none;
+}
+
+.icons_advice {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 5px 10px;
+}
+
+.icons_advice span {
+    background-color: #56FFAF;
+    padding: 10px 30px;
+    border-radius: 100px;
+    color: black;
+    transition: padding linear 0.2s;
+}
+.icons_advice span:hover {
+    cursor: pointer;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.icons_advice span:nth-child(2):hover {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.icons_advice .fa-heart {
+    transform: translateY(-18%);
+    margin-top: 50%;
+}
+
+.icons_advice .fa-share {
+    transform: translateY(-18%);
+    margin-top: 50%;
+}
+.icons_advice span:nth-child(2) {
+    padding: 10px 80px;
+}
+/* share */
+.share{
+    position: absolute;
+    top: 49px;
+    left: -30px;
+    padding: 10px 20px;
+    width: 120px;
+    background-color: #56FFAF;
+    border-radius: 10px;
+    display: none;
+}
+.share div{
+    display: flex;
+    justify-content: space-around;
+}
+.icons_advice span:nth-child(1){
+    position: relative;
+}
+.icons_advice span:nth-child(1):hover .share{
+    display: block;
+}
+
+/*  hidden popup icon tim */
+.hidden__popup {
+    background-color: white;
+    color: black;
+    padding: 20px 30px;
+    position: fixed;
+    width: 500px;
+    top: 40%;
+    text-align: center;
+    transform: translateX(-50%);
+    left: 50%;
+    display: none;
+    z-index: 1;
+}
+
+.fa-check-circle {
+    color: #75EAC0;
+    padding-top: 15px;
+    font-size: 60px;
+}
+
+.hidden__popup .button_ok {
+    font-size: 20px;
+    background-color: rgb(29, 107, 243);
+    border: none;
+    color: white;
+    margin-top:2px;
+    padding: 10px 40px;
+}
+
+.over__background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+    display: none;
+    animation: over__hidden linear 0.5s;
+}
+@keyframes over__hidden {
+    from{
+      opacity: 0;
+    }
+    to{
+      opacity: 1;
+    }
+  }
+  #popup__thongbao:checked ~ .over__background{
+    display: block;
+  }
+  #popup__thongbao:checked ~.hidden__popup{
+    display: block;
+  }
+/* Reponsive Tablet */
+@media screen and (min-width : 724px)and (max-width:1023px) {
+    .container {
+        width: 70%;
+    }
+
+    .fa-tablet-alt {
+        display: block;
+    }
+
+    .fa-desktop {
+        display: none;
+    }
+
+    .icons_advice span:nth-child(2):hover {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+/* Reponsive Mobile */
+@media screen and (max-width : 723.5px) {
+    .container {
+        width: 90%;
+        top: 30%;
+    }
+
+    .home__advice {
+        padding: 10px;
+    }
+
+    .title_advice {
+        padding: 10px
+    }
+
+    .title_advice h1 {
+        font-size: 20px;
+    }
+
+    .title_advice p {
+        font-size: 15px;
+    }
+
+    .icons_advice span {
+        padding: 5px 15px;
+    }
+
+    .icons_advice span i {
+        font-size: 15px;
+    }
+
+    .fa-mobile-alt {
+        display: block;
+    }
+
+    .fa-desktop {
+        display: none;
+    }
+
+    .icons_advice .fa-heart {
+        transform: translateY(0);
+        margin-top: 90%;
+    }
+
+    .icons_advice .fa-share {
+        transform: translateY(0);
+        margin-top: 90%;
+    }
+
+    .icons_advice {
+        justify-content: space-around;
+    }
+
+    .icons_advice span:nth-child(2) i {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .hidden__popup{
+        width: 400px;
+        top:30%;
+    }
+    .icons_advice span:nth-child(2):hover {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    .icons_advice span:hover {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+}

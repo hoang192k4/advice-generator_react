@@ -1,0 +1,53 @@
+  #popup__advice:checked ~ .over__background{
+    display: block;
+  }
+  #popup__advice:checked ~.hidden__popup{
+    display: block;
+  }
+.add_advices{
+    display: flex;
+    justify-content: center;
+}
+.advicentn{
+    margin-top: 50px;
+}
+.add_advice h1{
+    color: #75EAC0;
+    text-align: center;
+}
+.add_advice_submit {
+    padding:10px 40px;
+    text-align: center;
+}
+.add_advice_submit input{
+    width: 90%;
+    padding:10px;
+    font-size:20px;
+}
+.add_advice_submit button{
+    margin-top:30px;
+    border: none;
+    font-size:18px;
+    padding: 10px 30px;
+    background-color: #75EAC0;
+    color: black;
+    border-radius: 10px;
+    transition: transform ease 0.3s;
+}
+.add_advice_submit button:hover{
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+@media screen and (max-width:723px){
+    .add_advice_submit{
+        padding:10px 5px;
+    }
+    .add_advice_submit input{
+        font-size: 15px;
+    }
+}
+@media screen and (min-width : 724px)and (max-width:1023px) {
+    .advicentn{
+        margin-top: 0;
+    }
+}

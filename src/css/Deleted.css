@@ -1,0 +1,70 @@
+  #popup__khoiphuc:checked ~ .over__background{
+    display: block;
+  }
+  #popup__khoiphuc:checked ~.hidden__popup{
+    display: block;
+  }
+/*  advice đã xóa*/
+.advice__deleted{
+    margin-top: 50px;
+}
+.advice__deleted h1{
+    color: #75EAC0;
+    text-align: center;
+}
+.advice__deleted__list{
+    padding:5px;
+}
+.advice__deleted__list ul{
+    list-style:none;
+    padding-left:0;
+}
+.advice__deleted__list ul li{
+    font-size:20px;
+    border: 0.5px solid grey;
+    display: flex;
+    justify-content: space-between;
+}
+.advice__deleted__list ul li p{
+    padding: 10px 0 10px 50px;
+    margin:0;
+    width: 90%;
+}
+.advice__deleted__list ul li span{
+    width: 10%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    transition: background-color linear 0.3s;
+}
+.advice__deleted__list ul li span:hover{
+    background-color: #75EAC0;
+    cursor: pointer;
+}
+@media screen and (max-width:723px) {
+    .advice__deleted h1{
+        font-size: 20px;
+    }
+    .advice__deleted__list ul li{
+        font-size:13px;
+        flex-wrap: wrap;
+    }
+    .advice__deleted__list ul li p{
+        padding-left: 5px;
+        width: 100%;
+    }
+    .advice__deleted__list ul li span{
+        width: 100%;
+        padding:5px;
+    }
+}
+@media screen and (min-width:724px) and (max-width:1023px){
+    .advice__deleted__list ul li p{
+        padding-left: 10px;
+        width: 80%;
+    }
+    .advice__deleted__list ul li span{
+        width: 20%;
+    }
+}
